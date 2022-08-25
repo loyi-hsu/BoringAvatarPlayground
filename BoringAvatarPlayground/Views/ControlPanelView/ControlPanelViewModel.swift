@@ -15,13 +15,6 @@ class ControlPanelViewModel: ObservableObject {
 
     @Published var name = ""
     @Published var selectedVariant: String = "beam"
-    @Published var size = "500" {
-        willSet(newValue) {
-            if Int(newValue) != nil {
-                size = newValue
-            }
-        }
-    }
 
     @Published var colours = [
         Color.random(),
@@ -57,15 +50,13 @@ class ControlPanelViewModel: ObservableObject {
     }
 
     private func updatePreview() -> BoringAvatarModel? {
-        guard let selectedVariant = Variant(rawValue: selectedVariant),
-              let size = Int(size)
+        guard let selectedVariant = Variant(rawValue: selectedVariant)
         else {
             return nil
         }
         return BoringAvatarModel(
             name: name,
             variant: selectedVariant,
-            size: size,
             colours: Five<Color>(
                 first: colours[0],
                 second: colours[1],

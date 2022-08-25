@@ -10,7 +10,6 @@ import SwiftUI
 struct BoringAvatarModel {
     var name: String
     var variant: Variant
-    var size: Int
     var colours: Five<Color>
 
     enum Variant: String, CaseIterable {
@@ -37,6 +36,6 @@ struct BoringAvatarModel {
             return nil
         }
 
-        return URL(string: "https://source.boringavatars.com/\(variant.rawValue)/\(size)/\(nameQuery)?colors=\(coloursQuery)")
+        return URL(string: "https://source.boringavatars.com/\(variant.rawValue)/1000/\(nameQuery)?colors=\(coloursQuery)")
     }
 }
