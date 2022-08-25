@@ -35,17 +35,6 @@ struct ContentView: View {
         }
         .padding()
     }
-
-    private func showSavePanel(onOK: (URL?) -> Void) {
-        let savePanel = NSSavePanel()
-        savePanel.allowedContentTypes = [.image]
-        savePanel.canCreateDirectories = true
-        savePanel.isExtensionHidden = false
-        savePanel.allowsOtherFileTypes = false
-        savePanel.title = "Untitled"
-        let response = savePanel.runModal()
-        response == .OK ? onOK(savePanel.url) : nil
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
