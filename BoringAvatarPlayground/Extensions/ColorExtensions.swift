@@ -27,9 +27,9 @@ extension Color {
                 Int(ceil($0 * 255))
             }
             .map {
-                String($0, radix: 16, uppercase: true)
+                String($0, radix: 16, uppercase: false)
             }
             .joined()
-        return "#\(colour)"
+        return "\(colour)"
     }
 }

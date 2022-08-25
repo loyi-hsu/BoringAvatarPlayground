@@ -25,6 +25,13 @@ struct ContentView: View {
                 }
             }
             .frame(width: 200, height: 200, alignment: .center)
+
+            if let url = viewModel.request?.url {
+                Button("Copy URL") {
+                    NSPasteboard.general.clearContents()
+                    NSPasteboard.general.setString(url.absoluteString, forType: .string)
+                }
+            }
         }
         .padding()
     }
