@@ -31,7 +31,10 @@ struct ContentView: View {
             }
             .frame(width: 200, height: 200, alignment: .center)
 
-            if let url = viewModel.request?.url {
+            if let request = viewModel.request,
+               let url = request.url,
+               !request.name.isEmpty
+            {
                 HStack {
                     Button("Copy URL") {
                         NSPasteboard.general.clearContents()
@@ -42,7 +45,7 @@ struct ContentView: View {
                         let image = view.renderAsImage()
 
                         showSavePanel { url in
-                            save(image: image, to: url)
+                            image?.save(to: url)
                         }
                     }
                 }
@@ -63,19 +66,6 @@ struct ContentView: View {
         if response == .OK {
             closure(savePanel.url)
         }
-    }
-
-    private func save(image: CGImage?, to file: URL?) {
-        guard let image = image, let file = file else { return }
-        guard let destination = CGImageDestinationCreateWithURL(
-            file as CFURL,
-            UTType.png.identifier as CFString, 1,
-            nil
-        ) else {
-            return
-        }
-        CGImageDestinationAddImage(destination, image, nil)
-        CGImageDestinationFinalize(destination)
     }
 }
 
