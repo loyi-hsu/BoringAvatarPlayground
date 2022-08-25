@@ -24,8 +24,6 @@ struct ControlPanelView: View {
                 }
             }
 
-            TextField("Size", text: $viewModel.size)
-
             HStack {
                 ColorPicker(selection: $viewModel.colours[0]) {
                     Text("First")
