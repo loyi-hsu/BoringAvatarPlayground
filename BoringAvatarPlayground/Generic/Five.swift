@@ -14,7 +14,7 @@ struct Five<T> {
     var fourth: T
     var fifth: T
 
-    func map<U>(closure: @escaping (T, T, T, T, T) -> U) -> U {
-        return closure(first, second, third, fourth, fifth)
+    func toArray() -> [T] {
+        [first, second, third, fourth, fifth]
     }
 }

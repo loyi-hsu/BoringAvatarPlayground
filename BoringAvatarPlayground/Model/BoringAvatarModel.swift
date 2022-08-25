@@ -17,18 +17,9 @@ struct BoringAvatarModel {
     }
 
     var url: URL? {
-        let colours = colours
-            .map { first, second, third, fourth, fifth in
-                [
-                    first.convertToHex(),
-                    second.convertToHex(),
-                    third.convertToHex(),
-                    fourth.convertToHex(),
-                    fifth.convertToHex(),
-                ]
-                .compactMap { $0 }
-                .joined(separator: ",")
-            }
+        let colours = colours.toArray()
+            .compactMap { $0.convertToHex() }
+            .joined(separator: ",")
 
         guard let nameQuery = name.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
               let coloursQuery = colours.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
