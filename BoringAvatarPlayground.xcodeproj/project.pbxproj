@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF38A98D28B7B71E00258CD2 /* SVGView in Frameworks */ = {isa = PBXBuildFile; productRef = FF38A98C28B7B71E00258CD2 /* SVGView */; };
+		FF38A99028B7C73600258CD2 /* PickerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38A98F28B7C73600258CD2 /* PickerOptions.swift */; };
+		FF38A99428B7C76300258CD2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38A99328B7C76300258CD2 /* ContentViewModel.swift */; };
+		FF38A99728B7C78A00258CD2 /* ControlPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38A99628B7C78A00258CD2 /* ControlPanelViewModel.swift */; };
+		FF38A99928B7C7BB00258CD2 /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38A99828B7C7BB00258CD2 /* ControlPanelView.swift */; };
+		FF38A99C28B7C7E500258CD2 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38A99B28B7C7E500258CD2 /* ColorExtensions.swift */; };
+		FF38A99E28B7C80B00258CD2 /* Five.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38A99D28B7C80B00258CD2 /* Five.swift */; };
+		FFAA8B2D28B75FE100AD189A /* BoringAvatarPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA8B2C28B75FE100AD189A /* BoringAvatarPlaygroundApp.swift */; };
+		FFAA8B2F28B75FE100AD189A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA8B2E28B75FE100AD189A /* ContentView.swift */; };
+		FFAA8B3128B75FE200AD189A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAA8B3028B75FE200AD189A /* Assets.xcassets */; };
+		FFAA8B3428B75FE200AD189A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAA8B3328B75FE200AD189A /* Preview Assets.xcassets */; };
+		FFAA8B3C28B760A800AD189A /* BoringAvatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA8B3B28B760A800AD189A /* BoringAvatarModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF38A98F28B7C73600258CD2 /* PickerOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerOptions.swift; sourceTree = "<group>"; };
+		FF38A99328B7C76300258CD2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		FF38A99628B7C78A00258CD2 /* ControlPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelViewModel.swift; sourceTree = "<group>"; };
+		FF38A99828B7C7BB00258CD2 /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
+		FF38A99B28B7C7E500258CD2 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		FF38A99D28B7C80B00258CD2 /* Five.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Five.swift; sourceTree = "<group>"; };
+		FFAA8B2928B75FE100AD189A /* BoringAvatarPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoringAvatarPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAA8B2C28B75FE100AD189A /* BoringAvatarPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringAvatarPlaygroundApp.swift; sourceTree = "<group>"; };
+		FFAA8B2E28B75FE100AD189A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FFAA8B3028B75FE200AD189A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFAA8B3328B75FE200AD189A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FFAA8B3528B75FE200AD189A /* BoringAvatarPlayground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BoringAvatarPlayground.entitlements; sourceTree = "<group>"; };
+		FFAA8B3B28B760A800AD189A /* BoringAvatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringAvatarModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFAA8B2628B75FE100AD189A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF38A98D28B7B71E00258CD2 /* SVGView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF38A98628B7B53200258CD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF38A98E28B7C72A00258CD2 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				FF38A99D28B7C80B00258CD2 /* Five.swift */,
+				FF38A98F28B7C73600258CD2 /* PickerOptions.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		FF38A99128B7C75200258CD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF38A99228B7C75900258CD2 /* ContentView */,
+				FF38A99528B7C77200258CD2 /* ControlPanelView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FF38A99228B7C75900258CD2 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA8B2E28B75FE100AD189A /* ContentView.swift */,
+				FF38A99328B7C76300258CD2 /* ContentViewModel.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		FF38A99528B7C77200258CD2 /* ControlPanelView */ = {
+			isa = PBXGroup;
+			children = (
+				FF38A99828B7C7BB00258CD2 /* ControlPanelView.swift */,
+				FF38A99628B7C78A00258CD2 /* ControlPanelViewModel.swift */,
+			);
+			path = ControlPanelView;
+			sourceTree = "<group>";
+		};
+		FF38A99A28B7C7D300258CD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF38A99B28B7C7E500258CD2 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF38A99F28B7C86500258CD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA8B3B28B760A800AD189A /* BoringAvatarModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFAA8B2028B75FE100AD189A = {
+			isa = PBXGroup;
+			children = (
+				FFAA8B2B28B75FE100AD189A /* BoringAvatarPlayground */,
+				FF38A98628B7B53200258CD2 /* Frameworks */,
+				FFAA8B2A28B75FE100AD189A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFAA8B2A28B75FE100AD189A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA8B2928B75FE100AD189A /* BoringAvatarPlayground.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFAA8B2B28B75FE100AD189A /* BoringAvatarPlayground */ = {
+			isa = PBXGroup;
+			children = (
+				FF38A99A28B7C7D300258CD2 /* Extensions */,
+				FF38A98E28B7C72A00258CD2 /* Generic */,
+				FF38A99F28B7C86500258CD2 /* Model */,
+				FFAA8B3228B75FE200AD189A /* Preview Content */,
+				FF38A99128B7C75200258CD2 /* Views */,
+				FFAA8B3028B75FE200AD189A /* Assets.xcassets */,
+				FFAA8B3528B75FE200AD189A /* BoringAvatarPlayground.entitlements */,
+				FFAA8B2C28B75FE100AD189A /* BoringAvatarPlaygroundApp.swift */,
+			);
+			path = BoringAvatarPlayground;
+			sourceTree = "<group>";
+		};
+		FFAA8B3228B75FE200AD189A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA8B3328B75FE200AD189A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFAA8B2828B75FE100AD189A /* BoringAvatarPlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFAA8B3828B75FE200AD189A /* Build configuration list for PBXNativeTarget "BoringAvatarPlayground" */;
+			buildPhases = (
+				FFAA8B2528B75FE100AD189A /* Sources */,
+				FFAA8B2628B75FE100AD189A /* Frameworks */,
+				FFAA8B2728B75FE100AD189A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoringAvatarPlayground;
+			packageProductDependencies = (
+				FF38A98C28B7B71E00258CD2 /* SVGView */,
+			);
+			productName = BoringAvatarPlayground;
+			productReference = FFAA8B2928B75FE100AD189A /* BoringAvatarPlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFAA8B2128B75FE100AD189A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					FFAA8B2828B75FE100AD189A = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = FFAA8B2428B75FE100AD189A /* Build configuration list for PBXProject "BoringAvatarPlayground" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFAA8B2028B75FE100AD189A;
+			packageReferences = (
+				FF38A98B28B7B71E00258CD2 /* XCRemoteSwiftPackageReference "SVGView" */,
+			);
+			productRefGroup = FFAA8B2A28B75FE100AD189A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFAA8B2828B75FE100AD189A /* BoringAvatarPlayground */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFAA8B2728B75FE100AD189A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAA8B3128B75FE200AD189A /* Assets.xcassets in Resources */,
+				FFAA8B3428B75FE200AD189A /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFAA8B2528B75FE100AD189A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAA8B3C28B760A800AD189A /* BoringAvatarModel.swift in Sources */,
+				FFAA8B2D28B75FE100AD189A /* BoringAvatarPlaygroundApp.swift in Sources */,
+				FF38A99C28B7C7E500258CD2 /* ColorExtensions.swift in Sources */,
+				FFAA8B2F28B75FE100AD189A /* ContentView.swift in Sources */,
+				FF38A99428B7C76300258CD2 /* ContentViewModel.swift in Sources */,
+				FF38A99928B7C7BB00258CD2 /* ControlPanelView.swift in Sources */,
+				FF38A99728B7C78A00258CD2 /* ControlPanelViewModel.swift in Sources */,
+				FF38A99E28B7C80B00258CD2 /* Five.swift in Sources */,
+				FF38A99028B7C73600258CD2 /* PickerOptions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FFAA8B3628B75FE200AD189A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFAA8B3728B75FE200AD189A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FFAA8B3928B75FE200AD189A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BoringAvatarPlayground/BoringAvatarPlayground.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BoringAvatarPlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = 58XU6T3Y8M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkday.BoringAvatarPlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FFAA8B3A28B75FE200AD189A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BoringAvatarPlayground/BoringAvatarPlayground.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BoringAvatarPlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = 58XU6T3Y8M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkday.BoringAvatarPlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFAA8B2428B75FE100AD189A /* Build configuration list for PBXProject "BoringAvatarPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAA8B3628B75FE200AD189A /* Debug */,
+				FFAA8B3728B75FE200AD189A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFAA8B3828B75FE200AD189A /* Build configuration list for PBXNativeTarget "BoringAvatarPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAA8B3928B75FE200AD189A /* Debug */,
+				FFAA8B3A28B75FE200AD189A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FF38A98B28B7B71E00258CD2 /* XCRemoteSwiftPackageReference "SVGView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/SVGView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FF38A98C28B7B71E00258CD2 /* SVGView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF38A98B28B7B71E00258CD2 /* XCRemoteSwiftPackageReference "SVGView" */;
+			productName = SVGView;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FFAA8B2128B75FE100AD189A /* Project object */;
+}

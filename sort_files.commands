@@ -1,0 +1,3 @@
+#!/bin/bash
+
+perl ./sortXcodeProject.pl ./BoringAvatarPlayground.xcodeproj
