@@ -5,10 +5,30 @@
 //  Created by Loyi Hsu on 2022/8/25.
 //
 
+import Cocoa
 import Combine
-import CoreGraphics
+import UniformTypeIdentifiers
 
 class ContentViewModel: ObservableObject {
+    let controlPanelViewModel = ControlPanelViewModel()
+
+    var cancellables = Set<AnyCancellable>()
+
+    @Published var request: BoringAvatarModel?
+    @Published var selectedShape: Shape = .square
+    @Published var selectedOutputType: AcceptedOutputTypes = .png
+
+    init() {
+        controlPanelViewModel
+            .$request
+            .sink { [weak self] newValue in
+                self?.request = newValue
+            }
+            .store(in: &cancellables)
+    }
+}
+
+extension ContentViewModel {
     enum Shape: String, CaseIterable {
         case square = "Square", roundedSquare = "Rounded Square", round = "Round"
 
@@ -28,20 +48,28 @@ class ContentViewModel: ObservableObject {
             }
         }
     }
+}
 
-    let controlPanelViewModel = ControlPanelViewModel()
+extension ContentViewModel {
+    enum AcceptedOutputTypes: String, CaseIterable {
+        case jpeg, png
 
-    var cancellables = Set<AnyCancellable>()
-
-    @Published var request: BoringAvatarModel?
-    @Published var selectedShape: Shape = .square
-
-    init() {
-        controlPanelViewModel
-            .$request
-            .sink { [weak self] newValue in
-                self?.request = newValue
+        func convertToUTType() -> UTType {
+            switch self {
+            case .jpeg:
+                return .jpeg
+            case .png:
+                return .png
             }
-            .store(in: &cancellables)
+        }
+
+        func convertToNSBitmapImageRepFileType() -> NSBitmapImageRep.FileType {
+            switch self {
+            case .jpeg:
+                return .jpeg
+            case .png:
+                return .png
+            }
+        }
     }
 }
