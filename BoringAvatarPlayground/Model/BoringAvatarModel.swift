@@ -14,7 +14,7 @@ struct BoringAvatarModel {
     var colours: Five<Color>
 
     enum Variant: String, CaseIterable {
-        case beam, pixel, sunset, ring, bauhaus
+        case beam, pixel, sunset, ring
     }
 
     var url: URL? {
