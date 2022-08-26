@@ -29,6 +29,12 @@ extension Color {
             .map {
                 String($0, radix: 16, uppercase: false)
             }
+            .map {
+                if $0.count < 2 {
+                    return "0\($0)"
+                }
+                return $0
+            }
             .joined()
         return "\(colour)"
     }
