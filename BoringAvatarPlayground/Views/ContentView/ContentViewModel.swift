@@ -14,8 +14,6 @@ class ContentViewModel: ObservableObject {
 
     @Published var request: BoringAvatarModel?
 
-    var size: Int?
-
     init() {
         controlPanelViewModel
             .$request
