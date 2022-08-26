@@ -70,7 +70,7 @@ struct ContentView: View {
         .padding()
     }
 
-    func showSavePanel(closure: (URL?) -> Void) {
+    private func showSavePanel(closure: (URL?) -> Void) {
         let savePanel = NSSavePanel()
         savePanel.allowedContentTypes = [.png]
         savePanel.canCreateDirectories = true
