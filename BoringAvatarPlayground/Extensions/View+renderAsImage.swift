@@ -8,9 +8,9 @@
 import SwiftUI
 
 extension View {
-    func renderAsImage() -> CGImage? {
+    func renderAsImage(size: Int) -> CGImage? {
         let view = NoInsetHostingView(rootView: self)
-        view.setFrameSize(view.fittingSize)
+        view.setFrameSize(NSSize(width: size, height: size))
         return view.bitmapImage()
     }
 }

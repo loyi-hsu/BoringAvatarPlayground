@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BoringAvatarModel {
     var name: String
+    var size: Int
     var variant: Variant
     var colours: Five<Color>
 
@@ -27,6 +28,6 @@ struct BoringAvatarModel {
             return nil
         }
 
-        return URL(string: "https://source.boringavatars.com/\(variant.rawValue)/1000/\(nameQuery)?colors=\(coloursQuery)")
+        return URL(string: "https://source.boringavatars.com/\(variant.rawValue)/\(size)/\(nameQuery)?colors=\(coloursQuery)")
     }
 }
