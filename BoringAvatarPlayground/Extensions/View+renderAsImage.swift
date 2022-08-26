@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-    func renderAsImage(size: Int) -> CGImage? {
+    func renderAsImage(size: Int) -> NSImage? {
         let view = NoInsetHostingView(rootView: self)
         view.setFrameSize(NSSize(width: size, height: size))
         return view.bitmapImage()
