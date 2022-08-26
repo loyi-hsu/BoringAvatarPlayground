@@ -28,7 +28,7 @@ struct ControlPanelView: View {
                     }
                 }
 
-                Text("This value will be scaled up by 2 on Retina Devices.")
+                Text("This value will be scaled up by 2 times on Retina Devices.")
                     .font(.caption)
             }
 
