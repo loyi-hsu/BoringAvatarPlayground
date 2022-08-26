@@ -12,7 +12,7 @@ class ControlPanelViewModel: ObservableObject {
     typealias Variant = BoringAvatarModel.Variant
 
     @Published var request: BoringAvatarModel?
-
+    @Published var size: Int = 500
     @Published var name = ""
     @Published var selectedVariant: String = "beam"
 
@@ -27,8 +27,9 @@ class ControlPanelViewModel: ObservableObject {
     var cancellables = Set<AnyCancellable>()
 
     init() {
-        Publishers.CombineLatest3(
+        Publishers.CombineLatest4(
             $name,
+            $size,
             $selectedVariant,
             $colours
         )
@@ -56,6 +57,7 @@ class ControlPanelViewModel: ObservableObject {
         }
         return BoringAvatarModel(
             name: name,
+            size: size,
             variant: selectedVariant,
             colours: Five<Color>(
                 first: colours[0],

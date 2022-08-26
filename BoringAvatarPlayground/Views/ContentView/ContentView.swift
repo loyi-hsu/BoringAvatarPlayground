@@ -42,7 +42,7 @@ struct ContentView: View {
                     }
                     Button("Save Image") {
                         let view = createImageView(from: url)
-                        let image = view.renderAsImage()
+                        let image = view.renderAsImage(size: viewModel.size ?? 500)
 
                         showSavePanel { url in
                             image?.save(to: url)

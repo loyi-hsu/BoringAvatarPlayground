@@ -13,10 +13,19 @@ struct ControlPanelView: View {
     @ObservedObject var viewModel: ControlPanelViewModel
 
     let variantOptions = Variant.allCases.map(PickerOptions.init)
+    let sizeOptions = (1 ... 10)
+        .map { $0 * 100 }
+        .map(PickerOptions.init)
 
     var body: some View {
         VStack {
             TextField("Name", text: $viewModel.name)
+
+            Picker("Size", selection: $viewModel.size) {
+                ForEach(sizeOptions) { value in
+                    Text("\(value.content)").tag(value.content)
+                }
+            }
 
             Picker("Variant", selection: $viewModel.selectedVariant) {
                 ForEach(variantOptions) { option in
