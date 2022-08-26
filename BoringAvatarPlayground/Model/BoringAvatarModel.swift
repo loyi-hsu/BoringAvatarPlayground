@@ -28,6 +28,6 @@ struct BoringAvatarModel {
             return nil
         }
 
-        return URL(string: "https://source.boringavatars.com/\(variant.rawValue)/\(size)/\(nameQuery)?colors=\(coloursQuery)")
+        return URL(string: "https://source.boringavatars.com/\(variant.rawValue)/\(size)/\(nameQuery)?colors=\(coloursQuery)&square")
     }
 }

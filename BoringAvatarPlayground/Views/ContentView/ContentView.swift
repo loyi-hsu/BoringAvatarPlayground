@@ -19,9 +19,17 @@ struct ContentView: View {
         SVGView(contentsOf: url)
     }
 
+    let shapeOptions = ContentViewModel.Shape.allCases.map(PickerOptions.init)
+
     var body: some View {
         VStack {
             ControlPanelView(viewModel: viewModel.controlPanelViewModel)
+            if let (_, url) = requestUrlIfIsValidImage {
+                Button("Copy URL") {
+                    NSPasteboard.general.clearContents()
+                    NSPasteboard.general.setString(url.absoluteString, forType: .string)
+                }
+            }
             Group {
                 if let request = viewModel.request, let url = request.url {
                     createImageView(from: url)
@@ -30,18 +38,26 @@ struct ContentView: View {
                 }
             }
             .frame(width: 200, height: 200, alignment: .center)
+            .cornerRadius(
+                viewModel
+                    .selectedShape
+                    .getCornerRadius(size: 200)
+            )
 
-            if let request = viewModel.request,
-               let url = request.url,
-               !request.name.isEmpty
-            {
+            if let (request, url) = requestUrlIfIsValidImage {
                 HStack {
-                    Button("Copy URL") {
-                        NSPasteboard.general.clearContents()
-                        NSPasteboard.general.setString(url.absoluteString, forType: .string)
+                    Picker("Shape", selection: $viewModel.selectedShape) {
+                        ForEach(shapeOptions) { option in
+                            Text(option.content.rawValue).tag(option.content)
+                        }
                     }
                     Button("Save Image") {
                         let view = createImageView(from: url)
+                            .cornerRadius(
+                                viewModel
+                                    .selectedShape
+                                    .getCornerRadius(size: CGFloat(request.size))
+                            )
                         let image = view.renderAsImage(size: request.size)
 
                         showSavePanel { url in
@@ -66,6 +82,13 @@ struct ContentView: View {
         if response == .OK {
             closure(savePanel.url)
         }
+    }
+
+    private var requestUrlIfIsValidImage: (BoringAvatarModel, URL)? {
+        guard let request = viewModel.request, let url = request.url else {
+            return nil
+        }
+        return !request.name.isEmpty ? (request, url) : nil
     }
 }
 
