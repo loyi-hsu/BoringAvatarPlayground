@@ -15,11 +15,8 @@ struct ContentView: View {
 
     @StateObject var viewModel = ContentViewModel()
 
-    func createImageView(from url: URL) -> some View {
-        SVGView(contentsOf: url)
-    }
-
     let shapeOptions = ContentViewModel.Shape.allCases.map(PickerOptions.init)
+    let outputTypes = ContentViewModel.AcceptedOutputTypes.allCases.map(PickerOptions.init)
 
     var body: some View {
         VStack {
@@ -51,6 +48,11 @@ struct ContentView: View {
                             Text(option.content.rawValue).tag(option.content)
                         }
                     }
+                    Picker("Output Type", selection: $viewModel.selectedOutputType) {
+                        ForEach(outputTypes) { type in
+                            Text(type.content.rawValue).tag(type.content)
+                        }
+                    }
                     Button("Save Image") {
                         let view = createImageView(from: url)
                             .cornerRadius(
@@ -60,7 +62,10 @@ struct ContentView: View {
                             )
                         let image = view.renderAsImage(size: request.size)
                         showSavePanel { url in
-                            image?.save(to: url, fileType: .png)
+                            image?.save(
+                                to: url,
+                                fileType: viewModel.selectedOutputType.convertToNSBitmapImageRepFileType()
+                            )
                         }
                     }
                 }
@@ -69,9 +74,13 @@ struct ContentView: View {
         .padding()
     }
 
+    private func createImageView(from url: URL) -> some View {
+        SVGView(contentsOf: url)
+    }
+
     private func showSavePanel(closure: (URL?) -> Void) {
         let savePanel = NSSavePanel()
-        savePanel.allowedContentTypes = [.png]
+        savePanel.allowedContentTypes = [viewModel.selectedOutputType.convertToUTType()]
         savePanel.canCreateDirectories = true
         savePanel.isExtensionHidden = false
         savePanel.allowsOtherFileTypes = false
