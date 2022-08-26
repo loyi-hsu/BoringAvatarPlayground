@@ -21,10 +21,15 @@ struct ControlPanelView: View {
         VStack {
             TextField("Name", text: $viewModel.name)
 
-            Picker("Size", selection: $viewModel.size) {
-                ForEach(sizeOptions) { value in
-                    Text("\(value.content)").tag(value.content)
+            VStack(alignment: .trailing) {
+                Picker("Size", selection: $viewModel.size) {
+                    ForEach(sizeOptions) { value in
+                        Text("\(value.content)").tag(value.content)
+                    }
                 }
+
+                Text("This value will be scaled up by 2 on Retina Devices.")
+                    .font(.caption)
             }
 
             Picker("Variant", selection: $viewModel.selectedVariant) {

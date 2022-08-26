@@ -58,9 +58,7 @@ struct ContentView: View {
                                     .selectedShape
                                     .getCornerRadius(size: CGFloat(request.size))
                             )
-                        // The rendered images are all doubled in size.
-                        // Dividing the assigned size by two fixes the issue.
-                        let image = view.renderAsImage(size: request.size / 2)
+                        let image = view.renderAsImage(size: request.size)
                         showSavePanel { url in
                             image?.save(to: url, fileType: .png)
                         }
